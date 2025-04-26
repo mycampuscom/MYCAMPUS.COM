@@ -52,7 +52,7 @@ section.part.direction div ul li:hover{
 /*sections*/
 body{
     margin: 0%;
-    background-image: url("images/bodybackground.jpg");
+    background-image: url("bodybackground.jpg");
 }
 header {
     text-align: center;
