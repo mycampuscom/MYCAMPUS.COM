@@ -6,12 +6,17 @@
     <title>b.tech</title>
 
     <style>
+        body{
+            background-color: rgb(211, 182, 238);
+        }
         section.me{
             background-color: aqua;
         }
+        section.ce{
+            background-color: rgb(185, 250, 228);
+        }
         .class.scheme19{
-            display: inline-flex;
-            
+            display: flex;
             gap: 20px;
             
         }
@@ -21,6 +26,7 @@
             align-items: center;
             text-align: center;
             width: 300px;
+            
         }
         .text embed{
             width: 100%;
@@ -31,11 +37,37 @@
         }
         .text-caption{
             margin-top: 10px;
-            font-weight: boldsss;
+            font-weight: bold;
             margin-left: 30%;
         }
+        #mechContent, #civilContent {
+            display: none;
+            margin-top: 10px;
+        }
+        h2{
+            cursor: pointer;
+            color: blue;
+        }
     </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const mechHeading = document.getElementById("toggleMechHeading");
+    const mechContent = document.getElementById("mechContent");
+    mechHeading.addEventListener("click", function () {
+        mechContent.style.display = (mechContent.style.display === "none" || mechContent.style.display === "") ? "block" : "none";
+    });
+
+    const civilHeading = document.getElementById("toggleCivilHeading");
+    const civilContent = document.getElementById("civilContent");
+    civilHeading.addEventListener("click", function () {
+        civilContent.style.display = (civilContent.style.display === "none" || civilContent.style.display === "") ? "block" : "none";
+    });
+});
+</script>
+
 </head>
+
 <body>
     <header>
         <h1>
@@ -45,7 +77,8 @@
     </header>
 
     <section class="me">
-        <h2>Mechanical Engineering</h2>
+        <h2 id="toggleMechHeading">Mechanical Engineering</h2>
+        <div id="mechContent">
         <div class="lac">
             <h3>MAT101-LINEAR ALGEBRA AND CALCULUS</h3>
         <div class="scheme19">
@@ -53,23 +86,143 @@
 
             <div class="text">
                 
-                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" width="30%" height="30%" type="application/pdf">
+                <embed src="" type="application/pdf">
                 <div class="text-caption">Text</div>
             </div>
             <div class="text">
                 
-                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" width="30%" height="30%" type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRAANDCALCULUS syllabus.pdf"  type="application/pdf">
                 <div class="text-caption">Syllabus</div>
             </div>
             <div class="text">
                 
-                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" width="30%" height="30%" type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                 <div class="text-caption">Scheme</div>
             </div>
         </div>
         </div>
+
+        <div class="ep">
+            <h3>MAT102-VECTOR CALCULUS, DIFFERENTIAL EQUATIONS AND TRANSFORMS</h3>
+            <div class="scheme19">
+                <h4>2019 Scheme</h4>
+    
+                <div class="text">
+                    
+                    <embed src="" width="30%" height="30%" type="application/pdf">
+                    <div class="text-caption">Text</div>
+                </div>
+                <div class="text">
+                    
+                    <embed src="" width="30%" height="30%" type="application/pdf">
+                    <div class="text-caption">Syllabus</div>
+                </div>
+                <div class="text">
+                    
+                    <embed src="MAT102-VECTOR CALCULUS, DIFFERENTIAL EQUATIONS AND TRANSFORMS.pdf"  type="application/pdf">
+                    <div class="text-caption">Scheme</div>
+                </div>
+            </div>
+        </div>
+
         <div class="ep">
             <h3>PHT110-ENGINEERING PHYSICS B (FOR NON-CIRCUIT BRANCHES)</h3>
+            <div class="scheme19">
+                <h4>2019 Scheme</h4>
+    
+                <div class="text">
+                    
+                    <embed src="" width="30%" height="30%" type="application/pdf">
+                    <div class="text-caption">Text</div>
+                </div>
+                <div class="text">
+                    
+                    <embed src="PHT110-ENGINEERING PHYSICS B (FOR NON-CIRCUIT BRANCHES) syllabus.pdf"  type="application/pdf">
+                    <div class="text-caption">Syllabus</div>
+                </div>
+                <div class="text">
+                    
+                    <embed src="PHT110-ENGINEERING PHYSICS B (FOR NON-CIRCUIT BRANCHES) scheme.pdf" type="application/pdf">
+                    <div class="text-caption">Scheme</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ec">
+            <h3>CYT100-ENGINEERING CHEMISTRY</h3>
+            <div class="scheme19">
+                <h4>2019 Scheme</h4>
+    
+                <div class="text">
+                    
+                    <embed src=""  type="application/pdf">
+                    <div class="text-caption">Text</div>
+                </div>
+                <div class="text">
+                    
+                    <embed src="CYT100-ENGINEERING CHEMISTRY syllabus.pdf"  type="application/pdf">
+                    <div class="text-caption">Syllabus</div>
+                </div>
+                <div class="text">
+                    
+                    <embed src="CYT100-ENGINEERING CHEMISTRY scheme.pdf"  type="application/pdf">
+                    <div class="text-caption">Scheme</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="em">
+            <h3>EST100-ENGINEERINGMECHANICS</h3>
+            <div class="scheme19">
+                <h4>2019 Scheme</h4>
+    
+                <div class="text">
+                    
+                    <embed src=""  type="application/pdf">
+                    <div class="text-caption">Text</div>
+                </div>
+                <div class="text">
+                    
+                    <embed src=""  type="application/pdf">
+                    <div class="text-caption">Syllabus</div>
+                </div>
+                <div class="text">
+                    
+                    <embed src="EST100-ENGINEERINGMECHANICS.pdf"  type="application/pdf">
+                    <div class="text-caption">Scheme</div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+    </section>
+
+    <section class="ce">
+        <h2 id="toggleCivilHeading">Civil Engineering</h2>
+        <div id="civilContent">
+        <div class="lac">
+            <h3></h3>
+        <div class="scheme19">
+            <h4>2019 Scheme</h4>
+
+            <div class="text">
+                
+                <embed src="" type="application/pdf">
+                <div class="text-caption">Text</div>
+            </div>
+            <div class="text">
+                
+                <embed src=""  type="application/pdf">
+                <div class="text-caption">Syllabus</div>
+            </div>
+            <div class="text">
+                
+                <embed src=""  type="application/pdf">
+                <div class="text-caption">Scheme</div>
+            </div>
+        </div>
+        </div>
         </div>
     </section>
 
