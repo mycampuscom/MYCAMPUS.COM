@@ -18,6 +18,9 @@
         section.cs{
             background-color: rgb(183, 250, 228);
         }
+        section.cs{
+            background-color: rgb(183, 253, 228);
+        }
         .class.scheme19{
             display: flex;
             gap: 20px;
@@ -43,7 +46,7 @@
             font-weight: bold;
             margin-left: 30%;
         }
-        #mechContent, #civilContent, #csContent {
+        #mechContent, #civilContent, #csContent, #appliedContent {
             display: none;
             margin-top: 10px;
         }
@@ -71,6 +74,12 @@
     const csContent = document.getElementById("csContent");
     csHeading.addEventListener("click", function () {
         csContent.style.display = (csContent.style.display === "none" || csContent.style.display === "") ? "block" : "none";
+    });
+
+    const appliedHeading = document.getElementById("toggleAppliedHeading");
+    const appliedContent = document.getElementById("appliedContent");
+    appliedHeading.addEventListener("click", function () {
+        appliedContent.style.display = (appliedContent.style.display === "none" || appliedContent.style.display === "") ? "block" : "none";
     });
 });
 </script>
@@ -220,6 +229,31 @@
     <section class="cs">
         <h2 id="toggleCsHeading">Computer science and engineering</h2>
         <div id="csContent">
+        <div class="lac">
+            <h3></h3>
+        <div class="scheme19">
+            <h4>2019 Scheme</h4>
+
+            <div class="text">
+                <embed src="" type="application/pdf">
+                <div class="text-caption">Text</div>
+            </div>
+            <div class="text">
+                <embed src=""  type="application/pdf">
+                <div class="text-caption">Syllabus</div>
+            </div>
+            <div class="text">
+                <embed src=""  type="application/pdf">
+                <div class="text-caption">Scheme</div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="aei">
+        <h2 id="toggleAppliedHeading">Applied electronics and instrumentation engineering</h2>
+        <div id="appliedContent">
         <div class="lac">
             <h3></h3>
         <div class="scheme19">
