@@ -40,7 +40,7 @@
             font-weight: bold;
             margin-left: 30%;
         }
-        #mechContent, #civilContent {
+        #mechContent, #civilContent, #csContent {
             display: none;
             margin-top: 10px;
         }
@@ -62,6 +62,12 @@
     const civilContent = document.getElementById("civilContent");
     civilHeading.addEventListener("click", function () {
         civilContent.style.display = (civilContent.style.display === "none" || civilContent.style.display === "") ? "block" : "none";
+    });
+
+    const csHeading = document.getElementById("toggleCsHeading");
+    const csContent = document.getElementById("csContent");
+    csHeading.addEventListener("click", function () {
+        csContent.style.display = (csContent.style.display === "none" || csContent.style.display === "") ? "block" : "none";
     });
 });
 </script>
@@ -186,6 +192,31 @@
     <section class="ce">
         <h2 id="toggleCivilHeading">Civil Engineering</h2>
         <div id="civilContent">
+        <div class="lac">
+            <h3></h3>
+        <div class="scheme19">
+            <h4>2019 Scheme</h4>
+
+            <div class="text">
+                <embed src="" type="application/pdf">
+                <div class="text-caption">Text</div>
+            </div>
+            <div class="text">
+                <embed src=""  type="application/pdf">
+                <div class="text-caption">Syllabus</div>
+            </div>
+            <div class="text">
+                <embed src=""  type="application/pdf">
+                <div class="text-caption">Scheme</div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="cs">
+        <h2 id="toggleCsHeading">Computer science and engineering</h2>
+        <div id="csContent">
         <div class="lac">
             <h3></h3>
         <div class="scheme19">
