@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>Image Gallery</title>
   <style>
+    html,body{
+            height: 100%;
+            margin: 0;
+        }
+    
     .heading {
         text-align: center;
         margin-top: 20px;
@@ -12,11 +17,16 @@
       transform: scale(1.05);
     }
     body {
+      display: flex;
+      flex-direction: column;
       font-family: Arial, sans-serif;
       background-color: rgb(153, 240, 82);
       margin: 0;
       padding: 0;
     }
+    .wrapper{
+            flex: 1;
+        }
 
     .gallery {
       display: flex;
@@ -60,6 +70,7 @@
   </style>
 </head>
 <body>
+  <div class="wrapper">
 <h1 class="heading">MY CAMPUS.COM</h1>
 
 <div class="gallery">
@@ -87,6 +98,11 @@
     document.getElementById("fullscreen").style.display = "none";
   }
 </script>
+
+  </div>
+<footer>
+        <p>&copy; 2024 Mycampus.com. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
