@@ -6,8 +6,17 @@
     <title>b.tech</title>
 
     <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
         body{
+            display: flex;
+            flex-direction: column;
             background-color: rgb(211, 182, 238);
+        }
+        .wrapper{
+            flex: 1;
         }
         section.me{
             background-color: aqua;
@@ -58,6 +67,12 @@
             cursor: pointer;
             color: blue;
         }
+        footer {
+            text-align: center;
+            padding: 1px;
+            color: #000000;
+            font-size: 13px;
+        }
     </style>
 
 <script>
@@ -97,6 +112,7 @@
 </head>
 
 <body>
+    <div class="wrapper">
     <header>
         <h1>
             B.Tech Courses
@@ -287,7 +303,7 @@
     </section>
 
     <section class="ce">
-        <h2 id="toggleAppliedHeading">Chemical engineering</h2>
+        <h2 id="toggleChemicaldHeading">Chemical engineering</h2>
         <div id="chemicalContent">
         <div class="lac">
             <h3></h3>
@@ -310,10 +326,13 @@
         </div>
         </div>
     </section>
+    </div>
 
-    <footer>
+<footer>
+    
+  <p>&copy; 2024 Mycampus.com. All rights reserved.</p>
 
-    </footer>
+</footer>
     
 </body>
 </html>
