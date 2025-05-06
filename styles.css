@@ -2,6 +2,10 @@
     --box-shadow: rgb(107, 163, 179);
     --box-color: rgba(149, 231, 250, 0.267);
 }
+html,body{
+            height: 100%;
+            margin: 0;
+}
 
 /*transiton effect*/
 section.part.direction{
@@ -51,8 +55,13 @@ section.part.direction div ul li:hover{
 
 /*sections*/
 body{
+    display: flex;
+    flex-direction: column;
     margin: 0%;
     background-image: url("bodybackground.jpg");
+}
+.wrapper{
+            flex: 1;
 }
 header {
     text-align: center;
@@ -131,7 +140,13 @@ footer {
 footer p{
     font-size: smaller;
 }
-
+.footer {
+            text-align: center;
+            padding: 1px;
+            color: #000000;
+            font-size: 13px;
+            
+}
 /* tablet view */
 
 @media screen and (max-width:715px) {
