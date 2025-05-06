@@ -130,7 +130,7 @@ section p{
     font-size: medium;
 }
 
-footer {
+footer.contact {
     margin: 1%;
     box-shadow: 3px 3px 3px var(--box-shadow);
     padding: 1%;
