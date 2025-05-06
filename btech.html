@@ -18,9 +18,13 @@
         section.cs{
             background-color: rgb(183, 250, 228);
         }
-        section.cs{
+        section.aei{
             background-color: rgb(183, 253, 228);
         }
+        section.ce{
+            background-color: rgb(183, 253, 229);
+        }
+        
         .class.scheme19{
             display: flex;
             gap: 20px;
@@ -46,7 +50,7 @@
             font-weight: bold;
             margin-left: 30%;
         }
-        #mechContent, #civilContent, #csContent, #appliedContent {
+        #mechContent, #civilContent, #csContent, #appliedContent, #chemicalContent {
             display: none;
             margin-top: 10px;
         }
@@ -61,25 +65,31 @@
     const mechHeading = document.getElementById("toggleMechHeading");
     const mechContent = document.getElementById("mechContent");
     mechHeading.addEventListener("click", function () {
-        mechContent.style.display = (mechContent.style.display === "none" || mechContent.style.display === "") ? "block" : "none";
+    mechContent.style.display = (mechContent.style.display === "none" || mechContent.style.display === "") ? "block" : "none";
     });
 
     const civilHeading = document.getElementById("toggleCivilHeading");
     const civilContent = document.getElementById("civilContent");
     civilHeading.addEventListener("click", function () {
-        civilContent.style.display = (civilContent.style.display === "none" || civilContent.style.display === "") ? "block" : "none";
+    civilContent.style.display = (civilContent.style.display === "none" || civilContent.style.display === "") ? "block" : "none";
     });
 
     const csHeading = document.getElementById("toggleCsHeading");
     const csContent = document.getElementById("csContent");
     csHeading.addEventListener("click", function () {
-        csContent.style.display = (csContent.style.display === "none" || csContent.style.display === "") ? "block" : "none";
+    csContent.style.display = (csContent.style.display === "none" || csContent.style.display === "") ? "block" : "none";
     });
 
     const appliedHeading = document.getElementById("toggleAppliedHeading");
     const appliedContent = document.getElementById("appliedContent");
     appliedHeading.addEventListener("click", function () {
-        appliedContent.style.display = (appliedContent.style.display === "none" || appliedContent.style.display === "") ? "block" : "none";
+    appliedContent.style.display = (appliedContent.style.display === "none" || appliedContent.style.display === "") ? "block" : "none";
+    });
+
+    const chemicalHeading = document.getElementById("toggleChemicalHeading");
+    const chemicalContent = document.getElementById("chemicalContent");
+    chemicalHeading.addEventListener("click", function () {
+    chemicalContent.style.display = (chemicalContent.style.display === "none" || chemicalContent.style.display === "") ? "block" : "none";
     });
 });
 </script>
@@ -254,6 +264,31 @@
     <section class="aei">
         <h2 id="toggleAppliedHeading">Applied electronics and instrumentation engineering</h2>
         <div id="appliedContent">
+        <div class="lac">
+            <h3></h3>
+        <div class="scheme19">
+            <h4>2019 Scheme</h4>
+
+            <div class="text">
+                <embed src="" type="application/pdf">
+                <div class="text-caption">Text</div>
+            </div>
+            <div class="text">
+                <embed src=""  type="application/pdf">
+                <div class="text-caption">Syllabus</div>
+            </div>
+            <div class="text">
+                <embed src=""  type="application/pdf">
+                <div class="text-caption">Scheme</div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="ce">
+        <h2 id="toggleAppliedHeading">Chemical engineering</h2>
+        <div id="chemicalContent">
         <div class="lac">
             <h3></h3>
         <div class="scheme19">
