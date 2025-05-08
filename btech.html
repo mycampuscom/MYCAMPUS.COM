@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>b.tech</title>
+    <title>B.Tech : courses</title>
 
     <style>
-        html,body{
-            height: 100%;
+        body {
+            background-color: rgb(171, 234, 245);
+            font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
+            transition: background 0.3s, color 0.3s;
         }
-        body{
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #f8f9fa;
+            padding: 1px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
             display: flex;
-            flex-direction: column;
-            background-color: rgb(211, 182, 238);
-        }
-        .wrapper{
-            flex: 1;
-        }
-        section.me{
-            background-color: aqua;
-        }
-        section.ce{
-            background-color: rgb(185, 250, 228);
-        }
-        section.cs{
-            background-color: rgb(183, 250, 228);
-        }
-        section.aei{
-            background-color: rgb(183, 253, 228);
-        }
-        section.che{
-            background-color: rgb(183, 253, 229);
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .class.scheme19{
-            display: flex;
-            gap: 20px;
-            
         }
-        .text{
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 300px;
-            
-        }
-        .text embed{
-            width: 100%;
-            height: 400px;
+        input[type="text"] {
+            padding: 8px;
+            border-radius: 5px;
             border: 1px solid #ccc;
-            margin-left: 30%;
-            
+            width: 200px;
+            transition: all 0.3s;
         }
-        .text-caption{
-            margin-top: 10px;
-            font-weight: bold;
-            margin-left: 30%;
+        input[type="text"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0,123,255,0.5);
         }
-        #mechContent, #civilContent, #csContent, #appliedContent, #chemicalContent {
-            display: none;
-            margin-top: 10px;
+        section {
+            padding: 20px;
         }
-        h2{
+        h2 {
             cursor: pointer;
-            color: blue;
+            transition: background-color 0.3s;
+        }
+        h2:hover {
+            background-color: #e2e6ea;
+        }
+        .scheme19 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .text {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex: 1 1 300px;
+        }
+        .text:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .text-caption {
+            padding: 5px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+        .hidden {
+            display: none;
+        }
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            background: #b2ceec;
+            color: rgb(0, 0, 0);
+            padding: 3px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .section-content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.4s ease-out;
+        }
+        .section-content.show {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
         }
         footer {
-            text-align: center;
+            background-color: #f8f9fa;
             padding: 1px;
-            color: #000000;
-            font-size: 13px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .scheme19 {
+                flex-direction: column;
+            }
+            input[type="text"] {
+                width: 100%;
+            }
         }
     </style>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const mechHeading = document.getElementById("toggleMechHeading");
-    const mechContent = document.getElementById("mechContent");
-    mechHeading.addEventListener("click", function () {
-    mechContent.style.display = (mechContent.style.display === "none" || mechContent.style.display === "") ? "block" : "none";
-    });
-
-    const civilHeading = document.getElementById("toggleCivilHeading");
-    const civilContent = document.getElementById("civilContent");
-    civilHeading.addEventListener("click", function () {
-    civilContent.style.display = (civilContent.style.display === "none" || civilContent.style.display === "") ? "block" : "none";
-    });
-
-    const csHeading = document.getElementById("toggleCsHeading");
-    const csContent = document.getElementById("csContent");
-    csHeading.addEventListener("click", function () {
-    csContent.style.display = (csContent.style.display === "none" || csContent.style.display === "") ? "block" : "none";
-    });
-
-    const appliedHeading = document.getElementById("toggleAppliedHeading");
-    const appliedContent = document.getElementById("appliedContent");
-    appliedHeading.addEventListener("click", function () {
-    appliedContent.style.display = (appliedContent.style.display === "none" || appliedContent.style.display === "") ? "block" : "none";
-    });
-
-    const chemicalHeading = document.getElementById("toggleChemicalHeading");
-    const chemicalContent = document.getElementById("chemicalContent");
-    chemicalHeading.addEventListener("click", function () {
-    chemicalContent.style.display = (chemicalContent.style.display === "none" || chemicalContent.style.display === "") ? "block" : "none";
-    });
-});
-</script>
-
 </head>
 
 <body>
-    <div class="wrapper">
     <header>
-        <h1>
-            B.Tech Courses
-        </h1>
-
+    <h1>B.Tech : courses</h1>
+    <div class="toggle-buttons">
+        <input type="text" id="searchBar" placeholder="Search...">
+    </div>
     </header>
+<div class="container">
 
     <section class="me">
-        <h2 id="toggleMechHeading">Mechanical Engineering</h2>
-        <div id="mechContent">
+        <h2 data-target="togglemechContent">Mechanical Engineering</h2>
+        <div id="togglemechContent" class="section-content">
         <div class="lac">
             <h3>MAT101-LINEAR ALGEBRA AND CALCULUS</h3>
         <div class="scheme19">
             <h4>2019 Scheme</h4>
 
             <div class="text">
-                <embed src="" type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" type="application/pdf">
                 <div class="text-caption">Text</div>
             </div>
             <div class="text">
@@ -143,17 +143,17 @@
         </div>
         </div>
 
-        <div class="ep">
+        <div class="vdt">
             <h3>MAT102-VECTOR CALCULUS, DIFFERENTIAL EQUATIONS AND TRANSFORMS</h3>
             <div class="scheme19">
                 <h4>2019 Scheme</h4>
     
                 <div class="text">
-                    <embed src="" width="30%" height="30%" type="application/pdf">
+                    <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" type="application/pdf">
                     <div class="text-caption">Text</div>
                 </div>
                 <div class="text">
-                    <embed src="" width="30%" height="30%" type="application/pdf">
+                    <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" type="application/pdf">
                     <div class="text-caption">Syllabus</div>
                 </div>
                 <div class="text">
@@ -169,7 +169,7 @@
                 <h4>2019 Scheme</h4>
     
                 <div class="text">
-                    <embed src="" width="30%" height="30%" type="application/pdf">
+                    <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" type="application/pdf">
                     <div class="text-caption">Text</div>
                 </div>
                 <div class="text">
@@ -189,7 +189,7 @@
                 <h4>2019 Scheme</h4>
     
                 <div class="text">
-                    <embed src=""  type="application/pdf">
+                    <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                     <div class="text-caption">Text</div>
                 </div>
                 <div class="text">
@@ -209,11 +209,11 @@
                 <h4>2019 Scheme</h4>
     
                 <div class="text">
-                    <embed src=""  type="application/pdf">
+                    <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                     <div class="text-caption">Text</div>
                 </div>
                 <div class="text">
-                    <embed src=""  type="application/pdf">
+                    <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                     <div class="text-caption">Syllabus</div>
                 </div>
                 <div class="text">
@@ -228,23 +228,23 @@
     </section>
 
     <section class="ce">
-        <h2 id="toggleCivilHeading">Civil Engineering</h2>
-        <div id="civilContent">
+        <h2 data-target="togglecivilContent">Civil Engineering</h2>
+        <div id="togglecivilContent" class="section-content">
         <div class="lac">
             <h3></h3>
         <div class="scheme19">
             <h4>2019 Scheme</h4>
 
             <div class="text">
-                <embed src="" type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" type="application/pdf">
                 <div class="text-caption">Text</div>
             </div>
             <div class="text">
-                <embed src=""  type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                 <div class="text-caption">Syllabus</div>
             </div>
             <div class="text">
-                <embed src=""  type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                 <div class="text-caption">Scheme</div>
             </div>
         </div>
@@ -253,23 +253,23 @@
     </section>
 
     <section class="cs">
-        <h2 id="toggleCsHeading">Computer science and engineering</h2>
-        <div id="csContent">
+        <h2 data-target="togglecsContent">Computer science and engineering</h2>
+        <div id="togglecsContent"  class="section-content">
         <div class="lac">
             <h3></h3>
         <div class="scheme19">
             <h4>2019 Scheme</h4>
 
             <div class="text">
-                <embed src="" type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" type="application/pdf">
                 <div class="text-caption">Text</div>
             </div>
             <div class="text">
-                <embed src=""  type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                 <div class="text-caption">Syllabus</div>
             </div>
             <div class="text">
-                <embed src=""  type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                 <div class="text-caption">Scheme</div>
             </div>
         </div>
@@ -278,23 +278,23 @@
     </section>
 
     <section class="aei">
-        <h2 id="toggleAppliedHeading">Applied electronics and instrumentation engineering</h2>
-        <div id="appliedContent">
+        <h2 data-target="toggleappliedContent">Applied electronics and instrumentation engineering</h2>
+        <div id="toggleappliedContent" class="section-content">
         <div class="lac">
             <h3></h3>
         <div class="scheme19">
             <h4>2019 Scheme</h4>
 
             <div class="text">
-                <embed src="" type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" type="application/pdf">
                 <div class="text-caption">Text</div>
             </div>
             <div class="text">
-                <embed src=""  type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                 <div class="text-caption">Syllabus</div>
             </div>
             <div class="text">
-                <embed src=""  type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                 <div class="text-caption">Scheme</div>
             </div>
         </div>
@@ -303,23 +303,23 @@
     </section>
 
     <section class="che">
-        <h2 id="toggleChemicaldHeading">Chemical engineering</h2>
-        <div id="chemicalContent">
+        <h2 data-target="togglechemicalContent">Chemical engineering</h2>
+        <div id="togglechemicalContent" class="section-content">
         <div class="lac">
             <h3></h3>
         <div class="scheme19">
             <h4>2019 Scheme</h4>
 
             <div class="text">
-                <embed src="" type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf" type="application/pdf">
                 <div class="text-caption">Text</div>
             </div>
             <div class="text">
-                <embed src=""  type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                 <div class="text-caption">Syllabus</div>
             </div>
             <div class="text">
-                <embed src=""  type="application/pdf">
+                <embed src="MAT101-LINEAR ALGEBRA AND CALCULUS scheme.pdf"  type="application/pdf">
                 <div class="text-caption">Scheme</div>
             </div>
         </div>
@@ -328,11 +328,45 @@
     </section>
     </div>
 
-<footer>
-    
-  <p>&copy; 2024 Mycampus.com. All rights reserved.</p>
+     
+      
+     <button id="backToTop" onclick="scrollToTop()">Top</button>
 
-</footer>
+<script>
+    const searchBar = document.getElementById("searchBar");
+    const sections = document.querySelectorAll("section");
+
+    searchBar.addEventListener("input", () => {
+        const query = searchBar.value.toLowerCase();
+        sections.forEach(section => {
+            const match = section.innerText.toLowerCase().includes(query);
+            section.style.display = match ? "block" : "none";
+        });
+    });
+
     
+
+    document.querySelectorAll("h2").forEach(h2 => {
+    h2.addEventListener("click", () => {
+        const contentId = h2.dataset.target;
+        const contentDiv = document.getElementById(contentId);
+        if (contentDiv) {
+            contentDiv.classList.toggle("show");
+        }
+    });
+});
+
+    window.addEventListener("scroll", () => {
+        document.getElementById("backToTop").style.display = window.scrollY > 200 ? "block" : "none";
+    });
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>
+</div>
+<footer>
+    <p>&copy; 2024 Mycampus.com. All rights reserved.</p>
+</footer>
 </body>
 </html>
