@@ -1,26 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APJ Abdul Kalam Technological University</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #333;
+    }
 
+    header {
+      background-color: #00796b;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    section {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #004d40;
+    }
+
+    .ug, .pg, .phd {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 80%;
+      max-width: 600px;
+      transition: transform 0.3s ease;
+    }
+
+    .ug:hover, .pg:hover, .phd:hover {
+      transform: translateY(-5px);
+    }
+
+    h3 {
+      color: #00796b;
+      border-bottom: 2px solid #00796b;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #e65100;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
 <body>
-   <header>
-    <h1>APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY</h1>
-   </header>
-    
-   <section class="part direction">
-    <div>
-        <h2>Select course</h2>
-        <ul>
-            <li><a href="btech.html">B.Tech</a></li>
-            <li><a href="mba.html">MBA</a></li>
-        </ul>
-        
+
+  <header>
+    <h1>APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY (KTU)</h1>
+  </header>
+  
+  <section class="part direction">
+    <h2>Select Course</h2>
+
+    <div class="ug">
+      <h3>Undergraduate (UG) Courses</h3>
+      <ul>
+        <li><a href="btech.html">B.Tech (Bachelor of Technology)</a></li>
+        <li><a href="mba.html">MBA (via Integrated Program)</a></li>
+        <li>B.Arch (Bachelor of Architecture)</li>
+      </ul>
     </div>
-</section>
+
+    <div class="pg">
+      <h3>Postgraduate (PG) Courses</h3>
+      <ul>
+        <li>M.Tech (Master of Technology)</li>
+        <li><a href="mba.html">MBA (Master of Business Administration)</a></li>
+        <li>MCA (Master of Computer Applications)</li>
+      </ul>
+    </div>
+
+    <div class="phd">
+      <h3>Doctoral Programs (PhD)</h3>
+      <p>PhD programs are offered in engineering, technology, computer applications, and management. Available in both full-time and part-time modes.</p>
+    </div>
+  </section>
 
 </body>
 </html>
