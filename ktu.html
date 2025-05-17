@@ -5,11 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>APJ Abdul Kalam Technological University</title>
   <style>
+    html,body{  
+        height: 100%;  
+        margin: 0;  
+    }
     body {
+      display: flex;  
+      flex-direction: column;
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #e0f7fa, #ffffff);
       color: #333;
+    }
+    .wrapper{  
+        flex: 1;  
     }
 
     header {
@@ -85,10 +94,16 @@
       font-size: 1.05rem;
       line-height: 1.5;
     }
+    footer {  
+        text-align: center;  
+        padding: 1px;  
+        color: #000000;  
+        font-size: 3px;  
+    }
   </style>
 </head>
 <body>
-
+     <div class="wrapper">
   <header>
     <h1>APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY (KTU)</h1>
   </header>
@@ -100,7 +115,6 @@
       <h3>Undergraduate (UG) Courses</h3>
       <ul>
         <li><a href="btech.html">B.Tech (Bachelor of Technology)</a></li>
-        <li><a href="mba.html">MBA (via Integrated Program)</a></li>
         <li>B.Arch (Bachelor of Architecture)</li>
       </ul>
     </div>
@@ -119,6 +133,9 @@
       <p>PhD programs are offered in engineering, technology, computer applications, and management. Available in both full-time and part-time modes.</p>
     </div>
   </section>
-
+     </div>
+<footer>    
+    <p>&copy; 2024 Mycampus.com. All rights reserved.</p>  
+</footer> 
 </body>
 </html>
