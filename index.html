@@ -1,87 +1,240 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="mycampus, modern education, creer life">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>MY CAMPUS.COM</title>
+  <style>
+    :root {
+      --primary-color: #00796b;
+      --secondary-color: #b2ebf2;
+      --text-dark: #333;
+      --hover-color: #e0f7fa;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-    <title>MY CAMPUS.COM</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffffff, #e0f7fa);
+      color: var(--text-dark);
+    }
 
+    header {
+      text-align: center;
+      background-image: url("mycampus.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 50px 20px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    header h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    nav {
+      position: relative;
+      z-index: 1;
+      margin-top: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: var(--hover-color);
+      color: var(--text-dark);
+    }
+
+    section {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 900px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: background-color 0.6s ease;
+    }
+
+    section:hover {
+      background-color: var(--hover-color);
+    }
+
+    section h2 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      line-height: 1.6;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .about > div {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    figure img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      margin-bottom: 10px;
+    }
+
+    figcaption {
+      font-weight: bold;
+      color: #444;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background: var(--secondary-color);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin: 20px auto;
+      max-width: 900px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: var(--primary-color);
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .copy {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 10px;
+      color: #555;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <div class="wrapper">
-    <header>
-        <h1>MY CAMPUS.COM</h1>
-        <nav>
-            <ul>
-                <li><a href="img.html">images</a></li>
-                <li><a href="video.html">videos</a></li>
-            </ul>
-        </nav>
 
-    </header>
+  <header>
+    <h1>MY CAMPUS.COM</h1>
+    <nav>
+      <ul>
+        <li><a href="img.html">Images</a></li>
+        <li><a href="video.html">Videos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="part direction">
-        <div>
-            <ul>
-                <li><a href="campus.html">campus</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-            </ul>
-            <h2>MY CAMPUS.COM</h2>
-            <p> Welcome to the official website of "MY CAMPUS".
-                Were you find everything you need in your professional journey.The mission of Mycampus. is to support others in their academic and professional journey-offering knowledge,
-                opertunities and support to buid a better future.
-            </p>
-        </div>
-    </section>
+  <section class="part direction">
+    <h2>Welcome</h2>
+    <ul>
+      <li><a href="campus.html">Campus</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+    </ul>
+    <p>Welcome to the official website of <strong>MY CAMPUS . COM</strong>. Where, you will find everything you need in your academic and professional journey. Our mission is to support your growth by offering knowledge, opportunities, and guidance to build a brighter future.</p>
+  </section>
 
-    <section class="part about">
-        <div>
-            <h2>Founder & MD</h2>
-            <figure>
-                <img src="avp.jpg" alt="error loading image">
-                <figcaption>ABDUL VASITH P</figcaption>
-        </figure>
-
-        <details>
-                <summary>ABDUL VASITH P, also known as AVP is the founder and MD of Mycampus.com.
-                </summary>He is an engineer and a passionate innovator.He completed his B.Tech in Mechanical Engineering
-                with minors in Applied electronics and instrumentation from Government engineerng college Kozhikode. 
-                
-        </details>
-
-            <h2>Co-founder & CEO</h2>FARSANA JABIN P is the CEO of Mycampus.com.
-
-        </div>
-
-        <div>
-            <h2>notice board</h2>Click the "campus" link to get the products.
-        </div>
-    </section>
-
-    <section class="part teem">
-        <div>
-            <h2>our teem</h2>
-        </div>
-    </section>
+  <section class="part about">
+    <div>
+      <h2>Founder & MD</h2>
+      <figure>
+        <img src="avp.jpg" alt="Abdul Vasith P" />
+        <figcaption>ABDUL VASITH P</figcaption>
+      </figure>
+      <details>
+        <summary>About the Founder</summary>
+        <p>Abdul Vasith P, also known as AVP, is the founder and MD of Mycampus.com. He is an engineer and a passionate innovator who completed his B.Tech in Mechanical Engineering with minors in Applied Electronics and Instrumentation from Government Engineering College, Kozhikode.</p>
+      </details>
+      <h2>Co-founder & CEO</h2>
+      <p>Farsana Jabin P is the CEO of Mycampus.com.</p>
     </div>
+    <div>
+      <h2>Notice Board</h2>
+      <p>Click the "Campus" link above to explore products and updates.</p>
+    </div>
+  </section>
 
-    <footer>
-        <h2>Contact</h2>
-        <p>Contact: +91 9188631550
-        <br>email: mycampus.com2k24@gmail.com
-        </p>
-        <a href="https://linkedin.com" target="_blank">linkedin</a> <br>
-        <a href="https://instagram.com" target="_blank">instagram</a> <br>
-        <a href="https://facebook.com" target="_blank">facebook</a>
-    </footer>
-    <div class="copy">
+  <section class="part teem">
+    <h2>Our Team</h2>
+    <p>Meet the passionate individuals behind Mycampus.com (coming soon).</p>
+  </section>
+
+  <footer>
+    <h2>Contact</h2>
+    <p>
+      Phone: +91 9188631550<br>
+      Email: mycampus.com2k24@gmail.com
+    </p>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a><br>
+    <a href="https://instagram.com" target="_blank">Instagram</a><br>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+  </footer>
+
+  <div class="copy">
     <p>&copy; 2024 Mycampus.com. All rights reserved.</p>
-    </div>
-</body>
+  </div>
 
+</body>
 </html>
