@@ -3,27 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UNIVERSITY</title>
-</head>
-<style>
-  body{
-      background-color: rgb(147, 241, 237);
-  }
-</style>
+  <title>University Selection</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      color: #333;
+    }
 
+    header {
+      background-color: #008cba;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .kerala, .national {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      width: 300px;
+      transition: transform 0.3s;
+    }
+
+    .kerala:hover, .national:hover {
+      transform: scale(1.03);
+    }
+
+    h3 {
+      color: #008cba;
+      border-bottom: 2px solid #008cba;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #006699;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #ff5722;
+    }
+  </style>
+</head>
 <body>
+
   <header>
     <h1>SELECT YOUR UNIVERSITY</h1>
   </header>
-  
+
   <section class="section">
-    <div>
-        <ul>
-            <li><a href="ktu.html">APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY</a></li>
-            <li><a href="calicut.html">CALICUT UNIVERSITY</a></li>
-        </ul>
+    <div class="kerala">
+      <h3>Kerala Universities</h3>
+      <ul>
+        <li><a href="ktu.html">APJ Abdul Kalam Technological University (KTU)</a></li>
+        <li><a href="calicut.html">Calicut University (CU)</a></li>
+        <li>University of Kerala (KU)</li>
+        <li>Mahatma Gandhi University (MGU)</li>
+        <li>Cochin University of Science and Technology (CUSAT)</li>
+      </ul>
     </div>
-</section>
+
+    <div class="national">
+      <h3>National Institutes</h3>
+      <ul>
+        <li>Indian Institutes of Technology (IITs)</li>
+        <li>National Institutes of Technology (NITs)</li>
+        <li>Indian Institutes of Information Technology (IIITs)</li>
+        <li>Indian Institute of Science (IISc), Bangalore</li>
+        <li>Indian Institutes of Science Education and Research (IISERs)</li>
+        <li>All India Institute of Medical Sciences (AIIMS)</li>
+        <li>Indian Statistical Institute (ISI)</li>
+      </ul>
+    </div>
+  </section>
 
 </body>
 </html>
